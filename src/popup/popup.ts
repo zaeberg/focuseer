@@ -14,3 +14,4 @@ async function getCurrentTab() {
 window.addEventListener('DOMContentLoaded', () => {
   bootstrap();
 });
+

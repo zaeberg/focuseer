@@ -4,16 +4,24 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@picocss/pico':
+    specifier: ^2.0.6
+    version: 2.0.6
+
 devDependencies:
   '@types/chrome':
     specifier: ^0.0.263
     version: 0.0.263
+  sass:
+    specifier: ^1.72.0
+    version: 1.72.0
   typescript:
     specifier: ^5.2.2
     version: 5.4.2
   vite:
     specifier: ^5.1.6
-    version: 5.1.6
+    version: 5.1.6(sass@1.72.0)
   vite-plugin-static-copy:
     specifier: ^1.0.1
     version: 1.0.1(vite@5.1.6)
@@ -247,6 +255,11 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.1
     dev: true
+
+  /@picocss/pico@2.0.6:
+    resolution: {integrity: sha512-/d8qsykowelD6g8k8JYgmCagOIulCPHMEc2NC4u7OjmpQLmtSetLhEbt0j1n3fPNJVcrT84dRp0RfJBn3wJROA==}
+    engines: {node: '>=18.19.0'}
+    dev: false
 
   /@rollup/rollup-android-arm-eabi@4.13.0:
     resolution: {integrity: sha512-5ZYPOuaAqEH/W3gYsRkxQATBW3Ii1MfaT4EQstTnLKViLi2gLSQmlmtTpGucNP3sXEpOiI5tdGhjdE111ekyEg==}
@@ -495,6 +508,10 @@ packages:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
     dev: true
 
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+    dev: true
+
   /is-binary-path@2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -614,6 +631,16 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /sass@1.72.0:
+    resolution: {integrity: sha512-Gpczt3WA56Ly0Mn8Sl21Vj94s1axi9hDIzDFn9Ph9x3C3p4nNyvsqJoQyVXKou6cBlfFWEgRW4rT8Tb4i3XnVA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.5
+      source-map-js: 1.0.2
+    dev: true
+
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -647,10 +674,10 @@ packages:
       fast-glob: 3.3.2
       fs-extra: 11.2.0
       picocolors: 1.0.0
-      vite: 5.1.6
+      vite: 5.1.6(sass@1.72.0)
     dev: true
 
-  /vite@5.1.6:
+  /vite@5.1.6(sass@1.72.0):
     resolution: {integrity: sha512-yYIAZs9nVfRJ/AiOLCA91zzhjsHUgMjB+EigzFb6W2XTLO8JixBCKCjvhKZaye+NKYHCrkv3Oh50dH9EdLU2RA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -681,6 +708,7 @@ packages:
       esbuild: 0.19.12
       postcss: 8.4.35
       rollup: 4.13.0
+      sass: 1.72.0
     optionalDependencies:
       fsevents: 2.3.3
     dev: true

@@ -1,0 +1,48 @@
+@use "node_modules/@picocss/pico/scss/pico" with ($enable-responsive-typography: false);
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 600px;
+  width: 400px;
+  text-align: center;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+.dfcsb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dffdcc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sep {
+  width: 10px;
+}
